@@ -1,0 +1,51 @@
+class Std {
+
+    String name;
+    int age;
+
+    // Default Constructor
+    Std() {
+        name = "Lokhandi Wala";
+        age = 67;
+    }
+
+    // Parameterized Constructor
+    Std(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Method Overloading
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    void display(String course) {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Course: " + course);
+    }
+
+    // Static Method
+    static void college() {
+        System.out.println("Mvlu College");
+    }
+
+    public static void main(String[] args) {
+
+        // Calling Static Method
+        Std.college();
+
+        // Constructor Overloading
+        Std s1 = new Std();
+        Std s2 = new Std("Dhruv Yadav", 18);
+
+        // Method Overloading
+        System.out.println("\nStudent 1 Details:");
+        s1.display();
+
+        System.out.println("\nStudent 2 Details:");
+        s2.display("Printing Engineer");
+    }
+}
