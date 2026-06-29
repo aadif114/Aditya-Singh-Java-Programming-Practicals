@@ -1,0 +1,29 @@
+class Father {
+
+    void works() {
+        System.out.println("Father earns money");
+    }
+}
+
+class Son1 extends Father {
+
+    @Override
+    void works() {
+        System.out.println("Earns small amount and studies");
+    }
+}
+
+public class PRAC1B {
+
+    public static void main(String[] args) {
+
+        Father f = new Father();
+        Son1 s = new Son1();
+
+        System.out.println("Parent Class:");
+        f.works();
+
+        System.out.println("Child Class:");
+        s.works();
+    }
+}
