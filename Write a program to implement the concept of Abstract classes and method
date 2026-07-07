@@ -1,0 +1,27 @@
+abstract class BankAccount {
+
+    abstract void calculateInterest();
+
+    void displayBank() {
+        System.out.println("Welcome to ABC Bank");
+    }
+}
+
+class SavingsAccount extends BankAccount {
+
+    @Override
+    void calculateInterest() {
+        System.out.println("Interest Rate: 6% per year");
+    }
+}
+
+public class Practical2 {
+
+    public static void main(String[] args) {
+
+        SavingsAccount s = new SavingsAccount();
+
+        s.displayBank();
+        s.calculateInterest();
+    }
+}
