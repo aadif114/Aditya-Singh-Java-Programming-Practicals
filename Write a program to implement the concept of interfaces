@@ -1,0 +1,22 @@
+interface SmartDevice {
+
+    void turnOn();
+}
+
+class SmartBulb implements SmartDevice {
+
+    @Override
+    public void turnOn() {
+        System.out.println("Smart Bulb is now ON");
+    }
+}
+
+public class practical2b {
+
+    public static void main(String[] args) {
+
+        SmartBulb bulb = new SmartBulb();
+
+        bulb.turnOn();
+    }
+}
