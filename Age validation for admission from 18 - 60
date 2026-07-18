@@ -1,0 +1,31 @@
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+class Admission {
+    public void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Student must be at least 18 years old.");
+        } else if (age > 60) {
+            throw new InvalidAgeException("Age cannot be greater than 60.");
+        } else {
+            System.out.println("Admission approved.");
+        }
+    }
+}
+
+// Main class
+public class pra3c {
+    public static void main(String[] args) {
+        Admission admission = new Admission();
+
+        try {
+            admission.checkAge(20);  
+            admission.checkAge(15);  
+            admission.checkAge(65);  
+        } catch (InvalidAgeException e) {
+            System.out.println("Custom Exception Caught: " + e.getMessage());
+        }
+    }
+}
