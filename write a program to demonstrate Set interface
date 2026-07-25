@@ -1,0 +1,39 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class pra4b {
+    public static void main(String[] args) {
+
+     
+        System.out.println("S112 Aditya Singh");
+
+  
+        Set<String> stud = new HashSet<>();
+
+        // Adding elements
+        stud.add("Aniket");
+        stud.add("Nitin");
+        stud.add("Om");
+        stud.add("Karthik");
+        stud.add("Om"); 
+
+    
+        System.out.println("\nSet Elements: " + stud);
+
+       
+        System.out.println("Contains Nitin? " + stud.contains("Nitin"));
+
+       
+        stud.remove("Aniket");
+        System.out.println("After Removing: " + stud);
+
+       
+        System.out.println("Iterating through the Set:");
+        for (String student : stud) {
+            System.out.println(student);
+        }
+
+       
+        System.out.println("Size of Set: " + stud.size());
+    }
+}
