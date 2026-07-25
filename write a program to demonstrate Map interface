@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class pra4c {
+    public static void main(String[] args) {
+
+       
+        System.out.println("S112 Aditya Singh");
+
+       
+        Map<Integer, String> college = new HashMap<>();
+
+        
+        college.put(101, "MVLU");
+        college.put(102, "Valia");
+        college.put(103, "Vidyanidhi");
+        college.put(104, "VWC");
+
+        System.out.println("\nMap Elements: " + college);
+
+        System.out.println("College with Code No. 101: " + college.get(101));
+
+        college.put(102, "Mithibai");
+        System.out.println("After Updating: " + college);
+
+        college.remove(103);
+        System.out.println("After Removing: " + college);
+
+        System.out.println("Iterating through the Map:");
+        for (Map.Entry<Integer, String> entry : college.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
+        System.out.println("Size of Map: " + college.size());
+    }
+}
