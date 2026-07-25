@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pra4a {
+    public static void main(String[] args) {
+
+        
+        System.out.println("S112 Aditya Singh");
+
+        
+        List<String> fastfood = new ArrayList<>();
+
+       
+        fastfood.add("Burger");
+        fastfood.add("Pizza");
+        fastfood.add("Vadapav");
+        fastfood.add("Cake");
+
+        
+        System.out.println("\nList Elements: " + fastfood);
+
+        
+        System.out.println("First Element: " + fastfood.get(0));
+
+    
+        fastfood.set(1, "Samosa");
+        System.out.println("After Updating: " + fastfood);
+
+        
+        fastfood.remove("Cake");
+        System.out.println("After Removing: " + fastfood);
+
+
+        System.out.println("Iterating through the List:");
+        for (String fastf : fastfood) {
+            System.out.println(fastf);
+        }
+
+        
+        System.out.println("Size of List: " + fastfood.size());
+    }
+}
